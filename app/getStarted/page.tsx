@@ -1,5 +1,5 @@
 'use client'
-import Header from "@/component/Header";
+
 import { motion } from "framer-motion";
 
 export default function getStarted() {
@@ -46,8 +46,14 @@ export default function getStarted() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
-      <Header />
+    <div className="min-h-screen bg-gradient-to-b  ">
+      
+      <div className="w-full h-20 z-50 border-b bg-white flex">
+        <h1 className="text-3xl font-bold p-5">
+    AskWeb
+</h1>
+<button className="ml-[78%] bg-black text-white rounded-2xl w-28 mt-4 h-12 hover:bg-white hover:text-black hover:border border-black">New Chat</button>
+        </div>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-24">
         {/* Heading Section with subtle animation */}
         <motion.div 

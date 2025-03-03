@@ -1,5 +1,5 @@
 
-import Header from "@/component/Header";
+// import Header from "@/component/Header";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +9,12 @@ import { title } from "process";
     export default function LandingPage() {
       return (
        <div>
-      <Header/>
+        <div className="w-full h-20 z-50 bg-white flex border-b">
+        <h1 className="text-3xl font-bold p-5">
+    AskWeb
+</h1>
+<button className="ml-[78%] bg-black text-white rounded-2xl w-28 mt-4 h-12 hover:bg-white hover:text-black hover:border border-black">New Chat</button>
+        </div>
        
         <main className="min-h-screen bg-gradient-to-b from-white to-gray-50/50 flex items-center justify-center pt-28">
       

@@ -51,7 +51,12 @@ export default function QuestionPage({ params }: PageProps) {
   return (
     <>
       <div className="flex flex-col h-screen">
-        <Header />
+      <div className="w-full h-20 z-50 bg-white flex border-b">
+        <h1 className="text-3xl font-bold p-5">
+    AskWeb
+</h1>
+<button className="ml-[78%] bg-black text-white rounded-2xl w-28 mt-4 h-12 hover:bg-white hover:text-black hover:border border-black">New Chat</button>
+        </div>
 
         {/* Chat Container */}
         <div className="flex-1 flex flex-col items-center justify-center">
@@ -73,7 +78,7 @@ export default function QuestionPage({ params }: PageProps) {
         </div>
 
         {/* Input Section */}
-        <footer className="border-t bg-white  bottom-0 p-4 w-full">
+        <footer className="border-t bg-white -mt-12 bottom-0 p-4 w-full">
           <form
             onSubmit={handleSubmit}
             className="max-w-3xl mx-auto relative"
