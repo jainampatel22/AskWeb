@@ -32,7 +32,7 @@ export default function LandingPage() {
           >
             <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
               Chat With{" "}
-              <span className="text-6xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">
+              <span className="text-6xl sm:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">
                 Website&apos;s
               </span>
             </h1>
