@@ -5,7 +5,7 @@ import type React from "react"
 import { ArrowRight } from "lucide-react"
 import axios from "axios"
 import { use, useEffect, useState, useRef } from "react"
-import Link from "next/link"
+
 import Header from "@/component/Header"
 
 interface PageProps {
@@ -31,7 +31,7 @@ export default function QuestionPage({ params }: PageProps) {
     setQuestion("")
 
     try {
-      const res = await axios.post("http://localhost:4000/api/ask", {
+      const res = await axios.post("https://askweb-backend.onrender.com/api/ask", {
         url: paramUrl,
         question,
       })

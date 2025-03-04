@@ -20,7 +20,7 @@ export default function LandingPage() {
         </div>
 
       <main className="min-h-screen bg-gradient-to-b from-white to-gray-50/50 flex items-center justify-center pt-16 sm:pt-28">
-        <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#e5e5e5_2px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_2px,transparent_1px)] bg-[size:6rem_4rem]" />
+        <div className="absolute inset-0 -z-10 min-h-screen w-full bg-white bg-[linear-gradient(to_right,#e5e5e5_2px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_2px,transparent_1px)] bg-[size:6rem_4rem]" />
 
         <section className="w-full px-4 py-6 sm:py-8 mx-auto max-w-7xl sm:px-6 lg:px-8 flex flex-col items-center space-y-6 sm:space-y-10 text-center">
           {/* Hero content */}
@@ -33,7 +33,7 @@ export default function LandingPage() {
             <h1 className="-mt-4 sm:-mt-9 text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
               Chat With{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">
-                Website's
+                Website&apos;s
               </span>
             </h1>
             <p className="max-w-[600px] text-sm sm:text-base md:text-xl/relaxed xl:text-xl/relaxed text-gray-600 px-2">
@@ -57,7 +57,7 @@ export default function LandingPage() {
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-16 pt-6 sm:pt-8 max-w-3xl mx-auto">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-16 pt-6 sm:pt-8 max-w-3xl mx-auto">
             {[
               { title: "Fast", description: "Real-time streamed responses" },
               {
@@ -77,7 +77,7 @@ export default function LandingPage() {
                 <div className="text-xs sm:text-sm text-gray-600 mt-1">{description}</div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </section>
       </main>
     </div>
