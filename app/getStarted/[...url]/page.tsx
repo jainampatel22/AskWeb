@@ -7,6 +7,7 @@ import axios from "axios"
 import { use, useEffect, useState, useRef } from "react"
 
 import Header from "@/component/Header"
+import { motion } from "framer-motion"
 
 interface PageProps {
   params: Promise<{ url: string | string[] | undefined }>
@@ -87,7 +88,7 @@ export default function QuestionPage({ params }: PageProps) {
         </div>
 
         {/* Input Section */}
-        <footer className="border-t bg-white bottom-0 p-2 sm:p-4 w-full">
+        <footer className="border-t bg-white bottom-0 p-4 sm:p-4 w-full">
           <form onSubmit={handleSubmit} className="max-w-3xl mx-auto relative">
             <div className="relative flex items-center">
               <input

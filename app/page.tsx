@@ -62,13 +62,13 @@ export default function LandingPage() {
          animate={{ opacity: 1, x: 0 }}
          transition={{ delay: 2.3, duration: 0.8 }}
     
-        className="block sm:hidden grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 pt-8 max-w-3xl mx-auto">
+        className="block mb-10 sm:hidden grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 pt-8 max-w-3xl mx-auto">
 {
   [
     { title: "Fast", description: "Real-time streamed responses" },
     {
       title: "Modern",
-      description: "Next.js 15, Tailwind CSS, Convex, Clerk",
+      description: "Next.js 15, Tailwind CSS, Postgress, Prisma",
     },
     { title: "Smart", description: "Powered by Your Favourite LLM's" },
 
