@@ -81,7 +81,7 @@ export default function getStarted() {
           animate="visible"
           className="mt-8 sm:mt-16"
         >
-          <div className="-mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
+          <div className="-mt-14 ml-3 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
