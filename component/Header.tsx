@@ -8,7 +8,7 @@ export default function Header() {
    
    <h1 className="text-2xl sm:text-3xl font-bold p-4">
       <Link href="/">
-      AskWeb
+      WebSeer
       </Link>
 
 </h1>

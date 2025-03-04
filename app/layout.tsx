@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AskWeb",
+  title: "WebSeer",
   description: "Chat With website's !",
   icons:{
     icon:'/logo.svg'
