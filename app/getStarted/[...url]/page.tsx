@@ -7,7 +7,7 @@ import axios from "axios"
 import { use, useEffect, useState, useRef } from "react"
 
 import Header from "@/component/Header"
-import { motion } from "framer-motion"
+
 
 interface PageProps {
   params: Promise<{ url: string | string[] | undefined }>
