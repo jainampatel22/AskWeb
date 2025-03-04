@@ -19,7 +19,7 @@ export default function LandingPage() {
         </Link>
         </div>
 
-      <main className="min-h-screen bg-gradient-to-b from-white to-gray-50/50 flex items-center justify-center pt-16 sm:pt-28">
+      <main className="min-h-screen  bg-gradient-to-b from-white to-gray-50/50 flex items-center justify-center -mt-16 sm:pt-28">
         <div className="absolute inset-0 -z-10 min-h-screen w-full bg-white bg-[linear-gradient(to_right,#e5e5e5_2px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_2px,transparent_1px)] bg-[size:6rem_4rem]" />
 
         <section className="w-full px-4 py-6 sm:py-8 mx-auto max-w-7xl sm:px-6 lg:px-8 flex flex-col items-center space-y-6 sm:space-y-10 text-center">
@@ -36,11 +36,11 @@ export default function LandingPage() {
                 Website&apos;s
               </span>
             </h1>
-            <p className="max-w-[600px] text-sm sm:text-base md:text-xl/relaxed xl:text-xl/relaxed text-gray-600 px-2">
+            <p className="max-w-[600px] text-sm sm:text-base md:text-xl/relaxed xl:text-xl/relaxed pt-5 sm:pt-0 text-gray-600 px-2">
               Engage visitors like never before—our AI-powered chat seamlessly interacts with your website, answering
               queries and taking actions in real time!
               <br />
-              <span className="text-gray-400 text-xs sm:text-sm">Powered by your favourite LLM&apos;s.</span>
+              <span className="text-gray-400 text-xs sm:text-sm ">Powered by your favourite LLM&apos;s.</span>
             </p>
           </motion.header>
 
@@ -48,7 +48,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.8 }}
-            className="mt-8 sm:mt-16 text-center"
+            className="mt-20 sm:mt-24 text-center"
           >
             <Link href="/getStarted">
               <button className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform transition hover:-translate-y-1">
