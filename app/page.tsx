@@ -8,7 +8,7 @@ export default function LandingPage() {
     <div>
       {/* Responsive header */}
       <div className="w-full h-20 z-50 border-b bg-white flex justify-between items-center px-4 sm:px-6">
-        <h1 className="text-2xl sm:text-3xl font-bold">
+        <h1 className="text-3xl sm:text-3xl font-bold">
           <Link href="/">WebSeer</Link>
         </h1>
         <Link href="/getStarted">

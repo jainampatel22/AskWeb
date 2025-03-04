@@ -6,7 +6,7 @@ export default function Header() {
      
     <div className="w-full h-20 z-50 border-b bg-white flex justify-between items-center px-4 sm:px-6">
    
-   <h1 className="text-2xl sm:text-3xl font-bold p-4">
+   <h1 className="text-3xl sm:text-3xl font-bold p-4">
       <Link href="/">
       WebSeer
       </Link>
