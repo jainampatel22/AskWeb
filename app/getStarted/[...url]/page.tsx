@@ -47,7 +47,7 @@ export default function QuestionPage({ params }: PageProps) {
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
-  }, [])
+  }, [messages])
 
   return (
     <>
@@ -61,7 +61,7 @@ export default function QuestionPage({ params }: PageProps) {
               <p
                 key={index}
                 className={`p-2 sm:p-3 rounded-lg text-sm sm:text-base md:text-lg ${
-                  msg.startsWith("You:") ? "bg-blue-500 text-white self-end ml-8 sm:ml-16" : "bg-gray-200 mr-8 sm:mr-16"
+                  msg.startsWith("You:") ? "bg-blue-500 text-white self-end ml-8 sm:ml-0" : "bg-gray-200 mr-8 sm:mr-0"
                 }`}
               >
                 {msg}
