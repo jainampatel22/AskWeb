@@ -1,13 +1,14 @@
 'use client'
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function getStarted() {
   const steps = [
     { 
       title: "Pick the website of your choice.", 
       icon: "/icon-gradient-triangle (1).svg",
-      description: "Browse through our collection or enter any website you'd like to explore."
+      description: "enter any website you'd like to explore."
     },
     { 
       title: "Enter only the domain name.", 
@@ -48,13 +49,16 @@ export default function getStarted() {
   return (
     <div className="min-h-screen bg-gradient-to-b  ">
       
-      <div className="w-full h-20 z-50 border-b bg-white flex">
-        <h1 className="text-3xl font-bold p-5">
-    AskWeb
-</h1>
-<button className="ml-[78%] bg-black text-white rounded-2xl w-28 mt-4 h-12 hover:bg-white hover:text-black hover:border border-black">New Chat</button>
-        </div>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-24">
+      <div className="w-full h-20 z-50 border-b bg-white flex justify-between items-center px-4 sm:px-6">
+        <h1 className="text-2xl sm:text-3xl font-bold">
+          <Link href="/">AskWeb</Link>
+        </h1>
+        {/* <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl w-24 sm:w-28 text-bold h-10 sm:h-12 hover:bg-white hover:text-white hover:border border-white text-bold">
+          New Chat
+        </button> */}
+      </div>
+
+      <div className="mx-auto -mt-14 max-w-6xl px-4 sm:px-6 lg:px-8 pb-24">
         {/* Heading Section with subtle animation */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -77,7 +81,7 @@ export default function getStarted() {
           animate="visible"
           className="mt-8 sm:mt-16"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
+          <div className="-mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
@@ -115,7 +119,7 @@ export default function getStarted() {
         </motion.div>
 
         {/* Call to action */}
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
@@ -124,7 +128,7 @@ export default function getStarted() {
           <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform transition hover:-translate-y-1">
             Get Started Now
           </button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

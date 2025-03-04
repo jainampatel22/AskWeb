@@ -1,73 +1,67 @@
-"use client";
+"use client"
 
-import { ArrowRight } from "lucide-react";
-import axios from "axios";
-import { use, useEffect, useState, useRef } from "react";
-import Header from "@/component/Header";
+import type React from "react"
+
+import { ArrowRight } from "lucide-react"
+import axios from "axios"
+import { use, useEffect, useState, useRef } from "react"
+import Link from "next/link"
+import Header from "@/component/Header"
 
 interface PageProps {
-  params: Promise<{ url: string | string[] | undefined }>;
+  params: Promise<{ url: string | string[] | undefined }>
 }
 
 export default function QuestionPage({ params }: PageProps) {
-  const [question, setQuestion] = useState(""); // Store input
-  const [loading, setLoading] = useState(false);
-  const [messages, setMessages] = useState<string[]>([]);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const [question, setQuestion] = useState("") // Store input
+  const [loading, setLoading] = useState(false)
+  const [messages, setMessages] = useState<string[]>([])
+  const messagesEndRef = useRef<HTMLDivElement | null>(null)
 
   // Convert params to a usable format
-  const resolvedParams = use(params);
-  const paramUrl = Array.isArray(resolvedParams.url)
-    ? resolvedParams.url.join(",")
-    : resolvedParams.url;
+  const resolvedParams = use(params)
+  const paramUrl = Array.isArray(resolvedParams.url) ? resolvedParams.url.join(",") : resolvedParams.url
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!paramUrl || !question.trim()) return;
+    e.preventDefault()
+    if (!paramUrl || !question.trim()) return
 
-    setLoading(true);
-    setMessages((prev) => [...prev, `You: ${question}`]);
-    setQuestion("");
+    setLoading(true)
+    setMessages((prev) => [...prev, `You: ${question}`])
+    setQuestion("")
 
     try {
       const res = await axios.post("http://localhost:4000/api/ask", {
         url: paramUrl,
         question,
-      });
+      })
 
-      const newResponse = res.data.answer || "No response received";
-      setMessages((prev) => [...prev, newResponse]);
+      const newResponse = res.data.answer || "No response received"
+      setMessages((prev) => [...prev, newResponse])
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error:", error)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }, [])
 
   return (
     <>
       <div className="flex flex-col h-screen">
-      <div className="w-full h-20 z-50 bg-white flex border-b">
-        <h1 className="text-3xl font-bold p-5">
-    AskWeb
-</h1>
-<button className="ml-[78%] bg-black text-white rounded-2xl w-28 mt-4 h-12 hover:bg-white hover:text-black hover:border border-black">New Chat</button>
-        </div>
+       <Header/>
 
         {/* Chat Container */}
-        <div className="flex-1 flex flex-col items-center justify-center">
-          <div className="w-full max-w-3xl mt-4 p-1  space-y-2 overflow-y-auto h-[80vh] custom-scrollbar">
+        <div className="flex-1 flex flex-col items-center justify-center px-2 sm:px-4">
+          <div className="w-full max-w-3xl mt-2 sm:mt-4 p-1 space-y-2 overflow-y-auto h-[70vh] sm:h-[75vh] md:h-[80vh] custom-scrollbar">
             {messages.map((msg, index) => (
               <p
                 key={index}
-                className={`p-3 rounded-lg text-lg ${
-                  msg.startsWith("You:")
-                    ? "bg-blue-500 text-white self-end"
-                    : "bg-gray-200"
+                className={`p-2 sm:p-3 rounded-lg text-sm sm:text-base md:text-lg ${
+                  msg.startsWith("You:") ? "bg-blue-500 text-white self-end ml-8 sm:ml-16" : "bg-gray-200 mr-8 sm:mr-16"
                 }`}
               >
                 {msg}
@@ -78,30 +72,25 @@ export default function QuestionPage({ params }: PageProps) {
         </div>
 
         {/* Input Section */}
-        <footer className="border-t bg-white -mt-12 bottom-0 p-4 w-full">
-          <form
-            onSubmit={handleSubmit}
-            className="max-w-3xl mx-auto relative"
-          >
+        <footer className="border-t bg-white bottom-0 p-2 sm:p-4 w-full">
+          <form onSubmit={handleSubmit} className="max-w-3xl mx-auto relative">
             <div className="relative flex items-center">
               <input
                 type="text"
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
                 placeholder="Start Typing..."
-                className="flex-1 py-3 px-4 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent pr-12 bg-gray-50 placeholder:text-gray-500"
+                className="flex-1 py-2 sm:py-3 px-3 sm:px-4 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent pr-10 sm:pr-12 bg-gray-50 placeholder:text-gray-500 text-sm sm:text-base"
                 disabled={loading}
               />
               <button
                 type="submit"
                 disabled={loading || !question.trim()}
-                className={`absolute right-1.5 rounded-xl h-9 w-9 p-0 flex items-center justify-center transition-all ${
-                  question.trim()
-                    ? "bg-gray-400 hover:bg-gray-700 text-white shadow-sm"
-                    : "bg-gray-100 text-gray-400"
+                className={`absolute right-1.5 rounded-xl h-7 w-7 sm:h-9 sm:w-9 p-0 flex items-center justify-center transition-all ${
+                  question.trim() ? "bg-gray-400 hover:bg-gray-700 text-white shadow-sm" : "bg-gray-100 text-gray-400"
                 }`}
               >
-                <ArrowRight />
+                <ArrowRight size={16} className="sm:size-[18px]" />
               </button>
             </div>
           </form>
@@ -119,5 +108,6 @@ export default function QuestionPage({ params }: PageProps) {
         }
       `}</style>
     </>
-  );
+  )
 }
+
