@@ -41,6 +41,9 @@ export default function QuestionPage({ params }: PageProps) {
       setMessages((prev) => [...prev, newResponse])
     } catch (error) {
       console.error("Error:", error)
+      const errorMessage =  "Sorry! We are receiving high traffic. Get back to us after some minutes."
+      setMessages((prev) => [...prev,   errorMessage ])
+  
     } finally {
       setLoading(false)
     }
