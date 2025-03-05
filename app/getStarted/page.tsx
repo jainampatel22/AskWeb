@@ -119,16 +119,14 @@ export default function getStarted() {
         </motion.div>
 
         {/* Call to action */}
-        {/* <motion.div 
+        <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="mt-16 text-center"
+          className="mt-24  sm:ml-40 text-center"
         >
-          <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform transition hover:-translate-y-1">
-            Get Started Now
-          </button>
-        </motion.div> */}
+         <video src="/working-video.mp4" className="sm:w-[700px] sm:h-[700px] rounded-xl" autoPlay muted loop></video>
+        </motion.div>
       </div>
     </div>
   );
