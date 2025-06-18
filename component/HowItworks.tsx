@@ -1,9 +1,10 @@
 
+
 import { motion } from "framer-motion";
 import { Globe, Search, MessageSquare, ArrowRight } from "lucide-react";
 
-const GetStarted = () => {
-  const steps = [
+export default function HowItWorks() {
+const steps = [
     { 
       title: "Choose Your Website", 
       icon: Globe,
@@ -59,8 +60,8 @@ const GetStarted = () => {
     }
   };
 
-  return (
-    <div className="bg-white">
+    return (<>
+     <div className="bg-white">
       <div className="hidden sm:block">
         <div className="absolute inset-0 -z-10 min-h-screen w-full bg-white bg-[linear-gradient(to_right,#e5e5e5_2px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_2px,transparent_1px)] bg-[size:6rem_4rem]" />
       </div>
@@ -197,7 +198,6 @@ const GetStarted = () => {
         </motion.div>
       </div>
     </div>
-  );
-};
-
-export default GetStarted;
+    
+    </>)
+}

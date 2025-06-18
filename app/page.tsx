@@ -2,8 +2,7 @@
 // import Header from "@/component/Header";
 import { motion } from "framer-motion"
 
-import GetStarted from "./GetStarted/page"
-
+import HowItWorks from "@/component/HowItworks"
 export default function LandingPage() {
   return (
      <div className="bg-gradient-to-b from-gray-50/50 to-white min-h-screen">
@@ -67,7 +66,7 @@ export default function LandingPage() {
       </main>
 <div className="bg-white">
 
-      <GetStarted />
+      <HowItWorks />
   
 </div>
     </div>
