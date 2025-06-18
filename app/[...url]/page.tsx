@@ -6,7 +6,6 @@ import { ArrowRight } from "lucide-react"
 import axios from "axios"
 import { use, useEffect, useState, useRef } from "react"
 
-import Header from "@/component/Header"
 
 
 interface PageProps {
@@ -56,7 +55,7 @@ export default function QuestionPage({ params }: PageProps) {
   return (
     <>
       <div className="flex flex-col h-screen">
-       <Header/>
+       
 
         {/* Chat Container */}
         <div className="flex-1 flex flex-col items-center justify-center px-2 sm:px-4">
