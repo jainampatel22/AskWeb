@@ -81,7 +81,7 @@ export default function QuestionPage({ params }: PageProps) {
                 <div className="p-6 bg-white/60 backdrop-blur-md rounded-3xl shadow-xl border border-white/30 mb-8 max-w-md">
                   <Sparkles className="h-12 w-12 text-indigo-500 mx-auto mb-4" />
                   <h2 className="text-2xl font-bold text-gray-800 mb-2">Start a Conversation</h2>
-                  <p className="text-gray-600">Ask me anything about the content and I'll help you find the answers!</p>
+                  <p className="text-gray-600">Ask me anything about the content and I&apos;ll help you find the answers!</p>
                 </div>
               </div>
             )}
